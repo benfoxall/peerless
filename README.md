@@ -5,6 +5,7 @@
 ## A web server that runs _inside_ your web browser
 
 ```js
+// window1.html
 const server = new Server();
 
 console.log(await server.endpoint); // unique-generated-id-abcde
@@ -15,6 +16,7 @@ for await (const { message, reply } of server) {
 ```
 
 ```ts
+// window2.html
 const client = new Client('unique-generated-id-abcde');
 
 const response = await client.send('Peerage');
