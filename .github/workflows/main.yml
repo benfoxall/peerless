@@ -41,6 +41,21 @@ jobs:
         env:
           CI: true
 
-      - run: yarn maybe-publish
-        env:
-          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+      # - run: yarn maybe-publish
+      #   env:
+      #     NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+
+      - name: Check if version has been updated
+        id: check
+        uses: EndBug/version-check@v1
+
+      - name: Log when changed
+        if: steps.check.outputs.changed == 'true'
+        run: 'echo "Version change found in commit ${{ steps.check.outputs.commit }}! New version: ${{ steps.check.outputs.version }} (${{ steps.check.outputs.type }})"'
+      # - name: Check if version has been updated # You can edit this
+      #     id: check # This will be the reference for getting the outputs
+      #     uses: EndBug/version-check@v1 # You can choose the version/branch you prefer
+      #     with: # You can find more info about inputs below
+      #       diff-search: true
+      #       file-name: package.json
+      #       token: ${{ secrets.GITHUB_TOKEN }}
