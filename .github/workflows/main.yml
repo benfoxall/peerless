@@ -42,7 +42,6 @@ jobs:
           CI: true
 
       - name: Publish
-        run: echo '//registry.npmjs.org/:_authToken=${NPM_TOKEN}' > .npmrc
-        run: node scripts/publish.js
+        run: echo '//registry.npmjs.org/:_authToken=${NPM_TOKEN}' > .npmrc && node scripts/publish.js
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
