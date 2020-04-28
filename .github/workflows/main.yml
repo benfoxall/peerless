@@ -41,14 +41,12 @@ jobs:
         env:
           CI: true
 
-      # - run: yarn maybe-publish
-      #   env:
-      #     NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+      - name: "Automated Version Bump"
+        uses: "phips28/gh-action-bump-version@master"
+        with:
+          tag-prefix: ''
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Check if version has been updated
-        id: check
-        uses: EndBug/version-check@v1
-
-      - name: Log when changed
-        if: steps.check.outputs.changed == 'true'
-        run: 'echo "Version${{ steps.check.outputs.commit }}! ${{ steps.check.outputs.version }} (${{ steps.check.outputs.type }})"'
+      - name: "cat package.json"
+        run: cat ./package.json
