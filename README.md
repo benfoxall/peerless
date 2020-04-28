@@ -1,27 +1,30 @@
-# TSDX Bootstrap
+# 👑 Peerage
 
-This project was bootstrapped with [TSDX](https://github.com/jaredpalmer/tsdx).
+## _🚨 This isn't implemented yet 🚨_
 
-## Local Development
+## A web server that runs inside a web browser
 
-Below is a list of commands you will probably find useful.
+Using peer-to-peer communication for fast and free messaging.
 
-### `npm start` or `yarn start`
+```js
+const server = new Server();
 
-Runs the project in development/watch mode. Your project will be rebuilt upon changes. TSDX has a special logger for you convenience. Error messages are pretty printed and formatted for compatibility VS Code's Problems tab.
+console.log(await server.endpoint); // unique-generated-id-abcde
 
-<img src="https://user-images.githubusercontent.com/4060187/52168303-574d3a00-26f6-11e9-9f3b-71dbec9ebfcb.gif" width="600" />
+for await (const { message, reply } of server) {
+  reply('Hello, ' + message);
+}
+```
 
-Your library will be rebuilt if you make edits.
+```ts
+const client = new Client('unique-generated-id-abcde');
 
-### `npm run build` or `yarn build`
+const response = await client.send('Peerage');
 
-Bundles the package to the `dist` folder.
-The package is optimized and bundled with Rollup into multiple formats (CommonJS, UMD, and ES Module).
+console.log(response);
+// Hello, Peerage
+```
 
-<img src="https://user-images.githubusercontent.com/4060187/52168322-a98e5b00-26f6-11e9-8cf6-222d716b75ef.gif" width="600" />
+## [todo: video]
 
-### `npm test` or `yarn test`
-
-Runs the test watcher (Jest) in an interactive mode.
-By default, runs tests related to files changed since the last commit.
+### Streaming
