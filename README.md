@@ -2,9 +2,7 @@
 
 ## _🚨 This isn't implemented yet 🚨_
 
-## A web server that runs inside a web browser
-
-Using peer-to-peer communication for fast and free messaging.
+## A web server that runs _inside_ your web browser
 
 ```js
 const server = new Server();
@@ -27,4 +25,14 @@ console.log(response);
 
 ## [todo: video]
 
-### Streaming
+### 1:N
+
+Connect lots of devices together.
+
+### Speed
+
+Content travels directly between peers
+
+### Bidirectional streaming
+
+Send a stream of messages for interative UIs
