@@ -41,12 +41,7 @@ jobs:
         env:
           CI: true
 
-      - name: "Automated Version Bump"
-        uses: "phips28/gh-action-bump-version@master"
-        with:
-          tag-prefix: ''
+      - name: Publish version
+        uses: geoblink/publish-to-npm@v1.0.2
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: "cat package.json"
-        run: cat ./package.json
+          NPM_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
