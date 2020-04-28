@@ -1,6 +1,11 @@
-export const sum = (a: number, b: number) => {
-  if ('development' === process.env.NODE_ENV) {
-    console.log('boop');
+export class Server {
+  constructor() {
+    throw new Error("Unimplemented");
   }
-  return a + b;
-};
+}
+
+export class Client {
+  constructor() {
+    throw new Error("Unimplemented");
+  }
+}
