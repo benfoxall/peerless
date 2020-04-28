@@ -44,4 +44,4 @@ jobs:
       - name: Publish version
         uses: geoblink/publish-to-npm@v1.0.2
         env:
-          NPM_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
