@@ -1,7 +1,13 @@
-import { sum } from '../src';
+import { Server, Client } from '../src';
 
-describe('blah', () => {
-  it('works', () => {
-    expect(sum(1, 1)).toEqual(2);
+describe(Server, () => {
+  it('is unimplemented', () => {
+    expect(() => new Server()).toThrowError('Unimplemented');
+  });
+});
+
+describe(Client, () => {
+  it('is unimplemented', () => {
+    expect(() => new Client()).toThrowError('Unimplemented');
   });
 });
