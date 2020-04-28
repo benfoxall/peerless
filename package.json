@@ -16,7 +16,7 @@
     "test": "tsdx test",
     "lint": "tsdx lint",
     "prepare": "tsdx build",
-    "publish": "node ./scripts/publish.js"
+    "maybe-publish": "node ./scripts/maybe-publish.js"
   },
   "peerDependencies": {},
   "husky": {
