@@ -1,4 +1,4 @@
-# 👑 Peerage
+# 👑 Peerless
 
 ## _🚨 This isn't implemented yet 🚨_
 
@@ -19,10 +19,10 @@ for await (const { message, reply } of server) {
 // window2.html
 const client = new Client('unique-generated-code-abcde');
 
-const response = await client.send('Peerage');
+const response = await client.send('Peerless');
 
 console.log(response);
-// Hello, Peerage
+// Hello, Peerless
 ```
 
 ## [todo: video]

@@ -1,6 +1,6 @@
 const { execSync } = require('child_process');
 
-const published = JSON.parse(execSync('npm info peerage --json'));
+const published = JSON.parse(execSync('npm info peerless --json'));
 const current = require('../package.json').version;
 
 if (!published.versions.includes(current)) {

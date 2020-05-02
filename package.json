@@ -1,5 +1,5 @@
 {
-  "version": "0.1.5",
+  "version": "0.0.1",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -30,9 +30,9 @@
     "singleQuote": true,
     "trailingComma": "es5"
   },
-  "name": "peerage",
+  "name": "peerless",
   "author": "Ben Foxall",
-  "module": "dist/peerage.esm.js",
+  "module": "dist/peerless.esm.js",
   "devDependencies": {
     "husky": "^4.2.5",
     "tsdx": "^0.13.2",
@@ -40,7 +40,7 @@
     "typescript": "^3.8.3"
   },
   "bugs": {
-    "url": "https://github.com/benfoxall/peerage/issues"
+    "url": "https://github.com/benfoxall/peerless/issues"
   },
-  "homepage": "https://github.com/benfoxall/peerage#readme"
+  "homepage": "https://github.com/benfoxall/peerless#readme"
 }
